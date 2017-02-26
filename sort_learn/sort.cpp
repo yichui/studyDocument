@@ -91,3 +91,48 @@ void headSort(int arr[], int length)
 	}
 
 }
+
+//πÈ≤¢≈≈–Ú
+void filterMerge(int arr[], int block[], int startIndex, int midindex, int endIndex)
+{
+	int i = startIndex;
+	int j = midindex + 1;
+	int k = startIndex;
+
+	while( i < midindex + 1 && j <= endIndex)
+	{
+		if (arr[i] < arr[j])
+		{
+			block[k++] = arr[i++];
+		}
+		else
+		{
+			block[k++] = arr[j++];
+		}
+	}
+	while(i < midindex + 1)
+	{
+		block[k++] = arr[i++];
+	}
+	while ( j <= endIndex )
+	{
+		block[k++] = arr[j++];
+	}
+
+	for (i = startIndex; i <= endIndex; i++)
+	{
+		arr[i] = block[i];
+	}
+}
+
+
+void mergeSort(int arr[], int block[], int startIndex, int endIndex)
+{
+	if (startIndex < endIndex)
+	{
+		int midIndex = (startIndex + endIndex) / 2;
+		mergeSort(arr, block, startIndex, midIndex);
+		mergeSort(arr, block, midIndex + 1, endIndex);
+		filterMerge(arr, block, startIndex, midIndex, endIndex);
+	}
+}

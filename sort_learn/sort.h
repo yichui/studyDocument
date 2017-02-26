@@ -12,7 +12,8 @@ void quickSort(int arr[], int left, int right);
 //∂—≈≈–Ú
 void headSort(int arr[], int length);
 
-
+//πÈ≤¢≈≈–Ú
+void mergeSort(int arr[], int block[],  int startIndex, int endIndex);
 
 #endif
 
