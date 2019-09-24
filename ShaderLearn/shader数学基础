@@ -1,1 +1,9 @@
-
+矢量点乘
+  公式1：a.b = (ax,ay,az).(bx,by,bz) = axbx + ayby+azbz
+  公式2：a.b = |a||b|cosθ  
+  
+矢量叉乘
+  公式1：aXb = (ax,ay,az)X(bx,by,bz) = (aybz - azby, azbx-axbz, axby - aybx)
+  公式2:|aXb| = |a||b|sinθ
+  
+  
