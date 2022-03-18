@@ -1,0 +1,12 @@
+unity性能优化：
+  1.可以将大json文件格式改为读文本格式，例如：
+  "baoji_btn1_3" : {
+        "width" : 123.0,
+        "height" : 154.0,
+        "name"   : "baoji_btn1_3",
+        "isAtlas" : true,
+        "atlasName" : "Baojileletou",
+        "preLoad"   : false,
+        "noDelete"  : false
+    } 可以改为"baoji_btn1_3|123|154|baoji_btn1|true|Baojileletou|false|false"
+    可以JsonMapper.ToObject/ToWrapper/ReadValue的时间
